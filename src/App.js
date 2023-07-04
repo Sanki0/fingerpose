@@ -19,10 +19,11 @@ import { drawHand } from "./utilities";
 ///////// NEW STUFF IMPORTS
 import * as fp from "fingerpose";
 import victory from "./victory.png";
-import thumbs_up from "./thumbs_up.png";
+// import thumbs_up from "./thumbs_up.png";
 import pointing from "./pointing.png";
 import palma from "./palma.png"
 import ok from "./ok.png"
+import A from "./a.jpg"
 ///////// NEW STUFF IMPORTS
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
   ///////// NEW STUFF ADDED STATE HOOK
   const [emoji, setEmoji] = useState(null);
-  const images = { thumbs_up: thumbs_up, victory: victory, pointing: pointing, ok: ok, palma: palma };
+  const images = { victory: victory, pointing: pointing, ok: ok, palma: palma, a: A };
   ///////// NEW STUFF ADDED STATE HOOK
 
   const runHandpose = async () => {
@@ -140,18 +141,123 @@ function App() {
       Ok.addCurl(fp.Finger.Pinky, fp.FingerCurl.NoCurl, 1.0);
       Ok.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, .75);
 
+      // gesto a
+
+      const AGesture = new fp.GestureDescription('a')
+
+      // Dedo pulgar
+      AGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.NoCurl, 1.0);
+      AGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo índice
+      AGesture.addCurl(fp.Finger.Index, fp.FingerCurl.FullCurl, 1.0);
+      AGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo medio
+      AGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 1.0);
+      AGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo anular
+      AGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.FullCurl, 1.0);
+      AGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      AGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.FullCurl, 1.0);
+      AGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+
+      const EGesture = new fp.GestureDescription('e')
+
+
+
+      const IGesture = new fp.GestureDescription('i')
+
+      // Dedo índice
+      IGesture.addCurl(fp.Finger.Index, fp.FingerCurl.FullCurl, 1.0);
+      IGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      IGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
+      IGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo medio
+      IGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 1.0);
+      IGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo anular
+      IGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.FullCurl, 1.0);
+      IGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      IGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.NoCurl, 1.0);
+      IGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+
+
+
+
+      const OGesture = new fp.GestureDescription('o')
+
+      // Dedo índice
+      OGesture.addCurl(fp.Finger.Index, fp.FingerCurl.HalfCurl, 1.0);
+      OGesture.addDirection(fp.Finger.Index, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo pulgar
+      OGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.NoCurl, 1.0);
+      OGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo medio
+      OGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.HalfCurl, 1.0);
+      OGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo anular
+      OGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.HalfCurl, 1.0);
+      OGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo meñique
+      OGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.HalfCurl, 1.0);
+      OGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // letra u
+
+      const UGesture = new fp.GestureDescription('u')
+
+      // Dedo índice
+      UGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      UGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo medio
+      UGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.DiagonalUpLeft, 0.75);
+
+      // Dedo anular
+      UGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.NoCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      UGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.NoCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+
+
+
+
+
+      // Check if we are detecting something
 
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
-          fp.Gestures.VictoryGesture,
-          fp.Gestures.ThumbsUpGesture,
-          PointingGesture,
-          Ok,
-          Palma
+          // fp.Gestures.VictoryGesture,
+          // fp.Gestures.ThumbsUpGesture,
+          // PointingGesture,
+          // Ok,
+          // Palma,
+          AGesture, IGesture, OGesture,
         ]);
         const gesture = await GE.estimate(hand[0].landmarks, 4);
         if (gesture.gestures !== undefined && gesture.gestures.length > 0) {
-          console.log(gesture.gestures);
+          console.log("gesture.gestures", gesture.gestures);
 
           const confidence = gesture.gestures.map(
             (prediction) => prediction.confidence
@@ -159,7 +265,7 @@ function App() {
           const maxConfidence = confidence.indexOf(
             Math.max.apply(null, confidence)
           );
-          console.log(gesture.gestures[maxConfidence].name);
+          console.log("gesture.gestures[maxConfidence].name", gesture.gestures[maxConfidence].name);
           setEmoji(gesture.gestures[maxConfidence].name);
           console.log(emoji);
         }
