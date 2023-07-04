@@ -167,6 +167,25 @@ function App() {
 
       const EGesture = new fp.GestureDescription('e')
 
+      // Dedo índice
+      EGesture.addCurl(fp.Finger.Index, fp.FingerCurl.FullCurl, 0.75);
+      EGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      EGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
+      EGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.DiagonalUpRight, 0.75);
+
+      // Dedo medio
+      EGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 0.75);
+      EGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo anular
+      EGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.FullCurl, 0.75);
+      EGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      EGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.FullCurl, 0.75);
+      EGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
 
 
       const IGesture = new fp.GestureDescription('i')
@@ -222,27 +241,164 @@ function App() {
 
       // Dedo índice
       UGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 1.0);
-      UGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+      UGesture.addDirection(fp.Finger.Index, fp.FingerDirection.DiagonalUpRight, 1.0);
 
       // Dedo pulgar
       UGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
-      UGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.VerticalUp, 0.75);
+      UGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.HorizontalRight, 1.0);
 
       // Dedo medio
       UGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 1.0);
-      UGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.DiagonalUpLeft, 0.75);
+      UGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.DiagonalUpLeft, 1.0);
 
       // Dedo anular
-      UGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.NoCurl, 1.0);
-      UGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+      UGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.FullCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 1.0);
 
       // Dedo meñique
-      UGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.NoCurl, 1.0);
-      UGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+      UGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.FullCurl, 1.0);
+      UGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 1.0);
 
 
 
+      // Consonantes
 
+      // letra b
+      const BGesture = new fp.GestureDescription('b')
+
+      // Dedo índice
+      BGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 1.0);
+      BGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      BGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
+      // BGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.HorizontalRight, 0.75);
+
+      // Dedo medio
+      BGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 1.0);
+      BGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo anular
+      BGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.NoCurl, 1.0);
+      BGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      BGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.NoCurl, 1.0);
+      BGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+
+      // letra c
+      const CGesture = new fp.GestureDescription('c')
+
+      // Dedo índice
+      CGesture.addCurl(fp.Finger.Index, fp.FingerCurl.HalfCurl, 1.0);
+      CGesture.addDirection(fp.Finger.Index, fp.FingerDirection.DiagonalUpLeft, 0.75);
+
+      // Dedo pulgar
+      CGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.HalfCurl, 1.0);
+      CGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.HorizontalRight, 0.75);
+
+      // Dedo medio
+      CGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.HalfCurl, 1.0);
+      CGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.DiagonalUpLeft, 0.75);
+
+      // Dedo anular
+      CGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.HalfCurl, 1.0);
+      CGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.DiagonalUpLeft, 0.75);
+
+      // Dedo meñique
+      CGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.HalfCurl, 1.0);
+      CGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.DiagonalUpLeft, 0.75);
+
+      // letra d
+      const DGesture = new fp.GestureDescription('d')
+
+      // Dedo índice
+      DGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 1.0);
+      DGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 1.0);
+
+      // Dedo pulgar
+      DGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.FullCurl, 1.0);
+      DGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.HorizontalLeft, 0.75);
+
+      // Dedo medio
+      DGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 1.0);
+      DGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo anular
+      DGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.FullCurl, 1.0);
+      DGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo meñique
+      DGesture.addCurl(fp.Finger.Pinky, fp.FingerCurl.FullCurl, 1.0);
+      DGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.VerticalUp, 0.75);
+
+      // letra g
+      const GGesture = new fp.GestureDescription('g')
+
+      // Dedo índice
+      GGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 0.85);
+      GGesture.addDirection(fp.Finger.Index, fp.FingerDirection.HorizontalRight, 0.75);
+
+      // Dedo medio
+      GGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 0.85);
+      GGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.HorizontalRight, 0.75);
+
+      // letra h
+      const HGesture = new fp.GestureDescription('h')
+
+      // Dedo índice
+      HGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 0.85);
+      HGesture.addDirection(fp.Finger.Index, fp.FingerDirection.HorizontalRight, 0.75);
+
+      // Dedo medio
+      HGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 0.85);
+      HGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.HorizontalRight, 0.75);
+
+
+      // letra k
+      const KGesture = new fp.GestureDescription('k')
+
+      // Dedo índice
+      KGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 0.9);
+      KGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo medio
+      KGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 0.9);
+      KGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      KGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.NoCurl, 1.0);
+      KGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.VerticalUp, 0.70);
+
+      // letra l
+      const LGesture = new fp.GestureDescription('l')
+
+      // Dedo índice
+      LGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 0.9);
+      LGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo medio
+      LGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.FullCurl, 0.9);
+      LGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalUp, 0.75);
+
+      // Dedo pulgar
+      LGesture.addCurl(fp.Finger.Thumb, fp.FingerCurl.NoCurl, 1.0);
+      LGesture.addDirection(fp.Finger.Thumb, fp.FingerDirection.HorizontalRight, 0.95);
+
+      // letra m
+      const MGesture = new fp.GestureDescription('m')
+
+      // Dedo índice
+      MGesture.addCurl(fp.Finger.Index, fp.FingerCurl.NoCurl, 0.9);
+      MGesture.addDirection(fp.Finger.Index, fp.FingerDirection.VerticalDown, 0.75);
+
+      // Dedo medio
+      MGesture.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 0.9);
+      MGesture.addDirection(fp.Finger.Middle, fp.FingerDirection.VerticalDown, 0.75);
+
+      // Dedo anular
+      MGesture.addCurl(fp.Finger.Ring, fp.FingerCurl.NoCurl, 0.9);
+      MGesture.addDirection(fp.Finger.Ring, fp.FingerDirection.VerticalDown, 0.75);
 
       // Check if we are detecting something
 
@@ -251,9 +407,22 @@ function App() {
           // fp.Gestures.VictoryGesture,
           // fp.Gestures.ThumbsUpGesture,
           // PointingGesture,
-          // Ok,
+          Ok,
           // Palma,
-          AGesture, IGesture, OGesture,
+          AGesture,
+          EGesture,
+          IGesture,
+          OGesture,
+          UGesture,
+
+          BGesture,
+          CGesture,
+          DGesture,
+          GGesture,
+          HGesture,
+          KGesture,
+          LGesture,
+          MGesture,
         ]);
         const gesture = await GE.estimate(hand[0].landmarks, 4);
         if (gesture.gestures !== undefined && gesture.gestures.length > 0) {
@@ -265,7 +434,20 @@ function App() {
           const maxConfidence = confidence.indexOf(
             Math.max.apply(null, confidence)
           );
-          console.log("gesture.gestures[maxConfidence].name", gesture.gestures[maxConfidence].name);
+          var letter = gesture.gestures[maxConfidence].name;
+          if (gesture.gestures[maxConfidence].name == "a" && gesture.gestures[maxConfidence].confidence <= 6) {
+
+            var letter = "e";
+          }
+
+          if (gesture.gestures[maxConfidence].name == "d" && gesture.gestures[maxConfidence].confidence < 6) {
+            var letter = "u";
+          }
+          if (gesture.gestures[maxConfidence].name == "ok") {
+            var letter = "f";
+          }
+          console.log("letter", letter);
+          console.log("gesture.gestures[maxConfidence].confidence", gesture.gestures[maxConfidence].confidence);
           setEmoji(gesture.gestures[maxConfidence].name);
           console.log(emoji);
         }
